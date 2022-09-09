@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Logistics &mdash; Colorlib Website Template</title>
+    <title>Shipping Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -137,12 +137,23 @@
       </div>
     </div> -->
 
+    <div style="display: flex; justify-content: center; align-items: center; ">
+      <div class="p-5 bg-white" style="text-align: center;">
+        <h3>
+          Refrence ID
+        </h3>
+        <p>Click the button below to generate a new refrence id:</p>
+        <button class="btn btn-primary text-white"  onClick="newRandomNumber()">Generate!</button>
+        <p id="rand"></p>
+       </div>
+    </div>
+
     <div class="site-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
             <h2 class="mb-0 text-primary">What We Offer</h2>
-            <p class="color-black-opacity-5">Lorem ipsum dolor sit amet.</p>
+            <p class="color-black-opacity-5">Spinc Crystal Services</p>
           </div>
         </div>
         <div class="row align-items-stretch">
@@ -534,6 +545,13 @@
     </footer>
   </div>
 
+  <script>
+    function newRandomNumber() {
+      let x = Math.floor((100000 + Math.random() * 900000));
+      document.getElementById("rand").innerHTML = x;
+    }
+
+  </script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
