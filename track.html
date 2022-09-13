@@ -129,13 +129,16 @@
             <p style="margin: 0px 120px 0px 120px;">Enter your tracking ID code below and click the "Track" button to find out exactly where your cargo is right now and when it will arrive at it's final destination.</p>
             <form action="#" method="post" style="margin: 0px 150px 0px 150px;">
               <div class="input-group mb-3">
-                <input type="text" class="form-control border-secondary text-black bg-transparent" placeholder="Tracking ID Code" aria-label="Enter Email" aria-describedby="button-addon2">
+                <input type="text" class="form-control border-secondary text-black bg-transparent" placeholder="Tracking ID Code" id="trackingid" name="trackingId" aria-label="Enter Email" aria-describedby="button-addon2">
                 <div class="input-group-append">
                   <button class="btn btn-primary text-white" type="button" id="button-addon2">Track</button>
                 </div>
               </div>
             </form>         
             </div>
+        </div>
+
+        <div id="trackingDetails">
         </div>
 
       </div>
@@ -274,6 +277,9 @@
     </footer>
   </div>
   
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="axios.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
