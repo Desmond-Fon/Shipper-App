@@ -24,54 +24,14 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <style type="text/css">
-
-      input[type="checkbox"]:required:invalid + label { color: red; }
-        input[type="checkbox"]:required:valid + label { color: green; }
-      
-        input[type="checkbox"] {
-        accent-color: green;
-       
-        }
-        
-      
-        .checkbox-round {
-          width: 1.3em;
-          height: 1.3em;
-          border-radius: 50%;
-          vertical-align: middle;
-          border: 1px solid #ddd;
-          appearance: none;
-          -webkit-appearance: none;
-          outline: none;
-          cursor: pointer;
-      }
-      
-      .contain{
-        display: flex;
-        justify-content: center;
-        /* margin-bottom: 20px; */
-      }
-      .para{
-        display: flex;
-        justify-content: center;
-      }
-      
-      .space{
-        padding: 5px
-      }
-      
-      .checkbox-round:checked {
-          background-color: green;
-      }
-      
-      .progress{
-        height: 30px;
-      }
-      
-      
-      </style>
+  
     
+  
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
   </head>
   <body >
   
@@ -181,33 +141,72 @@
       </div>
     </div>
 
-   <div style="margin-bottom: 40px; margin-top: -40px;">
-    <div class="contain">
-      <form >
-   
-      <div class="progress" style="background-color: white;" >
-      <p><input id="field_terms" type="checkbox" class="checkbox-round" required name="terms" onclick="return false;">
-        <label for="field_terms">----------1----------</label></p>
-    
-        <p><input id="field_terms" type="checkbox" class="checkbox-round" required name="terms" style="color: green" onclick="return false;">
-          <label for="field_terms">----------2----------</label></p>
-    
-          <p><input id="field_terms" type="checkbox" class="checkbox-round" required name="terms" onclick="return false;">
-            <label for="field_terms">----------3----------</label></p>
-
-            <p><input id="field_terms" type="checkbox" class="checkbox-round" required name="terms" onclick="return false;">
-              <label for="field_terms"></label></p>
-          </div>
-   
-      </form>
+   <!-- <div style="margin-bottom: 40px; margin-top: -40px;" id="displayedElement"> -->
+    <div id="loadProgress" style="margin-bottom: 40px; margin-top: -40px;">
+      <div class="contain" >
+        <form id="form" action="" method="POST">
+     
+          <div class="progress" style="background-color: white;" >
+            <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class1" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
+              <label for="field_terms">----------1----------</label></p>
+          
+              <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class2" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
+                <label for="field_terms">----------2----------</label></p>
+          
+                <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class3" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
+                  <label for="field_terms">----------3----------</label></p>
+      
+                  <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class4" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
+                    <label for="field_terms"></label></p>
+                </div>
+     
+        </form>
+       </div>
+         <div class="para">
+         <p style="padding: 8px 8px 8px 8px">1. Order picked up</p>
+         <p style="padding: 8px 8px 8px 8px">2. On transit</p>
+         <p style="padding: 8px 8px 8px 8px">3. Order almost there</p>
+         <p style="padding: 8px 0px 8px 8px">4. Order arrivuged</p>
+        </div>
      </div>
-       <div class="para">
-       <p style="padding: 8px 8px 8px 8px">1. Order picked up</p>
-       <p style="padding: 8px 8px 8px 8px">2. On transit</p>
-       <p style="padding: 8px 8px 8px 8px">3. Order almost there</p>
-       <p style="padding: 8px 0px 8px 8px">4. Order arrived</p>
-      </div>
-   </div>
+
+     <script type='text/javascript'>
+      $(function(){
+          var test = localStorage.checkbox_class1 === 'true'? true: false;
+          $('.checkbox_class1').prop('checked', test || false);
+      });
+      $('.checkbox_class1').on('change', function() {
+          localStorage.checkbox_class1 = $(this).is(':checked');
+          console.log($(this).is(':checked'));
+      });
+  
+      $(function(){
+          var test = localStorage.checkbox_class2 === 'true'? true: false;
+          $('.checkbox_class2').prop('checked', test || false);
+      });
+      $('.checkbox_class2').on('change', function() {
+          localStorage.checkbox_class2 = $(this).is(':checked');
+          console.log($(this).is(':checked'));
+      });
+  
+      $(function(){
+          var test = localStorage.checkbox_class3 === 'true'? true: false;
+          $('.checkbox_class3').prop('checked', test || false);
+      });
+      $('.checkbox_class3').on('change', function() {
+          localStorage.checkbox_class3 = $(this).is(':checked');
+          console.log($(this).is(':checked'));
+      });
+  
+      $(function(){
+          var test = localStorage.checkbox_class4 === 'true'? true: false;
+          $('.checkbox_class4').prop('checked', test || false);
+      });
+      $('.checkbox_class4').on('change', function() {
+          localStorage.checkbox_class4 = $(this).is(':checked');
+          console.log($(this).is(':checked'));
+      });
+        </script>
 
     
     
