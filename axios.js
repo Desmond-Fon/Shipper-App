@@ -10,9 +10,6 @@ window.addEventListener("load", function() {
       let jsonData = JSON.stringify(formDataEntries)
       console.log(jsonData);
 
-      // axios.post('https://shipping-appb.onrender.com/api/users/', {
-      //   data: formDataEntries
-      // })
       axios.post("https://shipping-appb.onrender.com/api/users/", {
         data: formDataEntries
       })
@@ -115,18 +112,18 @@ const getdata = () => {
 getTrackingId.addEventListener('click', getdata)
 
 
-const login = document.getElementById('login')
 
+// const login = document.getElementById('login')
 
-const loginadmin = () => {
-  console.log(login);
-  axios.get('https://localhost:5000/api/admin')
-  .then ((res) => {
-    console.log(res.data.data);
-  })
-  .catch((err) => {
-    console.log("error>>",err)
-      throw err;
-  });
-} 
-login.addEventListener('click', loginadmin)
+// const loginadmin = () => {
+//   console.log(login);
+//   axios.post('localhost:5000/api/admin/login')
+//   .then ((res) => {
+//     console.log(res.data.data);
+//   })
+//   .catch((err) => {
+//     console.log("error>>",err)
+//       throw err;
+//   });
+// } 
+// login.addEventListener('click', loginadmin)
