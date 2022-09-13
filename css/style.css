@@ -1397,3 +1397,46 @@ h1, h2, h3, h4, h5,
 .custom-pagination span {
   background: #e6e6e6;
   color: #000; }
+
+  input[type="checkbox"]:required:invalid + label { color: red; }
+        input[type="checkbox"]:required:valid + label { color: green; }
+      
+        input[type="checkbox"] {
+        accent-color: green;
+       
+        }
+        
+      
+        .checkbox-round {
+          width: 1.3em;
+          height: 1.3em;
+          border-radius: 50%;
+          vertical-align: middle;
+          border: 1px solid #000;
+          appearance: none;
+          -webkit-appearance: none;
+          outline: none;
+          cursor: pointer;
+      }
+      
+      .contain{
+        display: flex;
+        justify-content: center;
+        /* margin-bottom: 20px; */
+      }
+      .para{
+        display: flex;
+        justify-content: center;
+      }
+      
+      .space{
+        padding: 5px
+      }
+      
+      .checkbox-round:checked {
+          background-color: green;
+      }
+      
+      .progress{
+        height: 30px;
+      }

@@ -258,42 +258,38 @@ jQuery(document).ready(function ($) {
 var btnButton = document.createElement("button");
 // btnButton.innerHTML = "delete";
 
-// 2. Append somewhere
-// document.getElementById('tableData').appendChild(btnButton);
-// var td = document.getElementsByTagName("td");
-// td.appendChild(btnButton);
-
-// 3. Add event handler
-// button.addEventListener ("click", function() {
-  // alert("did something");
-// });
-// var btnButton = document.createElement("button");
+function RemoveRow() {
+  // event.target will be the input element.
+  var td = event.target.parentNode; 
+  var tr = td.parentNode; // the row to be removed
+  tr.parentNode.removeChild(tr);
+}
 
 var mainObj = [
   {
       email:  "test@email.com",
       location: "Bahamas",
-      edit: "delete"
+      label: '<input type="button" value="Delete" class="btn btn-primary text-white" onclick="RemoveRow()"/>' 
   },
   {
       email:  "test@email.com",
       location: "Atlanta",
-      edit: "delete"
+      label: '<input type="button" value="Delete" class="btn btn-primary text-white" onclick="RemoveRow()"/>' 
   },
   {
       email:  "test@email.com",
       location: "India",
-      edit: "delete"
+      label: '<input type="button" value="Delete" class="btn btn-primary text-white" onclick="RemoveRow()"/>' 
   },
   {
     email:  "test@email.com",
     location: "Ghana",
-    edit: "delete"
+    label: '<input type="button" value="Delete" class="btn btn-primary text-white" onclick="RemoveRow()"/>' 
 },
 {
   email:  "test@email.com",
   location: "Las Vegas",
-  edit: "delete"
+  label: '<input type="button" value="Delete" class="btn btn-primary text-white" onclick="RemoveRow()"/>' 
 }
 ];
 
@@ -303,21 +299,20 @@ currentValue.SERIAL_NO = Index + 1
 return currentValue
 })
 
+// mainObj.push({label: '<input type="button" value="B"/>' });
+
+
 var k = '<tbody>'
 for(i = 0;i < mainObj.length; i++){
   k+= '<tr>';
   k+= '<td>' + mainObj[i].SERIAL_NO + '</td>';
   k+= '<td>' + mainObj[i].email + '</td>';
   k+= '<td>' + mainObj[i].location + '</td>';
-k+= '<td>' + mainObj[i].edit + '</td>';
+// k+= '<td>' + mainObj[i].edit + '</td>';
+k+= '<td>' + mainObj[i].label + '</td>';
   k+= '</tr>';
 }
 k+='</tbody>';
 document.getElementById('tableData').innerHTML = k;
 
-// const [{ edit } ]= mainObj;
-// console.log(edit)
-
-
-// edit.classList.add("btn btn-primary text-white");
 
