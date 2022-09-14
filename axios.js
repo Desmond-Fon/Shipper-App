@@ -86,21 +86,21 @@ const getdata = () => {
   </div>
     <div id="loadProgress" style="margin-bottom: 40px; margin-top: 40px;">
       <div class="contain" >
-          <div class="progress" style="background-color: white;" >
+          <div class="progress" style="background-color: white; height: 65px" >
             <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class1" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
-              <label for="field_terms">----------1----------</label></p>
+              <label for="field_terms">--------1--------</label></p>
           
               <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class2" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
-                <label for="field_terms">----------2----------</label></p>
+                <label for="field_terms">--------2--------</label></p>
           
                 <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class3" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
-                  <label for="field_terms">----------3----------</label></p>
+                  <label for="field_terms">--------3--------</label></p>
       
                   <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class4" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
                     <label for="field_terms"></label></p>
                 </div>
        </div>
-         <div class="para">
+         <div class="para" >
          <p style="padding: 8px 8px 8px 8px">1. Order picked up </p>
          <p style="padding: 8px 8px 8px 8px">2. On transit to ${res.data.return.shippingAddress} </p>
          <p style="padding: 8px 8px 8px 8px">3. Close to arrival</p>
