@@ -44,8 +44,47 @@ const getdata = () => {
   axios.get(`https://shipping-appb.onrender.com/api/users/${trackingId}`)
   .then((res) => {
     console.log(res.data.return);
-    trackingDetails.innerHTML = `<form style=" display: flex; flex-direction: column; justify-content: center; align-items: center;"><input value=${res.data.return.name} disabled /><br><input value=${res.data.return.email} disabled /><br><input value=${res.data.return.shippingAddress} disabled /><br><input value=${res.data.return.phoneNumber} disabled /><br><input value=${res.data.return.content} disabled /><br><input value=${res.data.return.amountPaid} disabled /><br></form> 
-    <div id="loadProgress" style="margin-bottom: 40px; margin-top: -40px;">
+    trackingDetails.innerHTML = `
+    <div class="site-wrap">
+    <form class="p-5 bg-white" style="margin: 0px 50px 0px 50px;">
+    <div class="row form-group">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <label class="text-black" >Name</label>
+        <input value=${res.data.return.name} class="form-control" disabled />
+      </div>
+      <div class="col-md-6">
+        <label class="text-black" >Email</label>
+        <input value=${res.data.return.email} class="form-control" disabled />
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <label class="text-black" >Shopping Address</label>
+        <input
+        value=${res.data.return.shippingAddress} class="form-control" disabled />
+      </div>
+      <div class="col-md-6">
+        <label class="text-black" >Phone Number</label>
+        <input value=${res.data.return.phoneNumber} class="form-control"
+        disabled />
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <label class="text-black" >Content</label>
+        <input value=${res.data.return.content} class="form-control" disabled />
+      </div>
+      <div class="col-md-6">
+        <label class="text-black" >Amount Paid</label>
+        <input value=${res.data.return.amountPaid} class="form-control"
+    disabled />
+      </div>
+    </div>
+  </form> 
+  </div>
+    <div id="loadProgress" style="margin-bottom: 40px; margin-top: 40px;">
       <div class="contain" >
           <div class="progress" style="background-color: white;" >
             <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class1" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
@@ -64,7 +103,7 @@ const getdata = () => {
          <div class="para">
          <p style="padding: 8px 8px 8px 8px">1. Order picked up </p>
          <p style="padding: 8px 8px 8px 8px">2. On transit to ${res.data.return.shippingAddress} </p>
-         <p style="padding: 8px 8px 8px 8px">3. Clise to arrival</p>
+         <p style="padding: 8px 8px 8px 8px">3. Close to arrival</p>
          <p style="padding: 8px 0px 8px 8px">4. Order arrived at ${res.data.return.shippingAddress} </p>
         </div>
      </div>
