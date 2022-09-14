@@ -45,7 +45,7 @@ const getdata = () => {
   .then((res) => {
     console.log(res.data.return);
     trackingDetails.innerHTML = `
-    <div class="site-wrap">
+    <div class="site-wrap" style="overflow-x: hidden;">
     <form class="p-5 bg-white" style="margin: 0px 50px 0px 50px;">
     <div class="row form-group">
       <div class="col-md-6 mb-3 mb-md-0">
@@ -84,66 +84,7 @@ const getdata = () => {
     </div>
   </form> 
   </div>
-    <div id="loadProgress" style="margin-bottom: 40px; margin-top: 40px;">
-      <div class="contain" >
-          <div class="progress" style="background-color: white; height: 65px" >
-            <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class1" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
-              <label for="field_terms">--------1--------</label></p>
-          
-              <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class2" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
-                <label for="field_terms">--------2--------</label></p>
-          
-                <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class3" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
-                  <label for="field_terms">--------3--------</label></p>
-      
-                  <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class4" required name="terms"  value="example1" autocomplete="off"  onclick="return false;">
-                    <label for="field_terms"></label></p>
-                </div>
-       </div>
-         <div class="para" >
-         <p style="padding: 8px 8px 8px 8px">1. Order picked up </p>
-         <p style="padding: 8px 8px 8px 8px">2. On transit to ${res.data.return.shippingAddress} </p>
-         <p style="padding: 8px 8px 8px 8px">3. Close to arrival</p>
-         <p style="padding: 8px 0px 8px 8px">4. Order arrived at ${res.data.return.shippingAddress} </p>
-        </div>
-     </div>
-     <script type='text/javascript'>
-      $(function(){
-          var test = localStorage.checkbox_class1 === 'true'? true: false;
-          $('.checkbox_class1').prop('checked', test || false);
-      });
-      $('.checkbox_class1').on('change', function() {
-          localStorage.checkbox_class1 = $(this).is(':checked');
-          console.log($(this).is(':checked'));
-      });
-  
-      $(function(){
-          var test = localStorage.checkbox_class2 === 'true'? true: false;
-          $('.checkbox_class2').prop('checked', test || false);
-      });
-      $('.checkbox_class2').on('change', function() {
-          localStorage.checkbox_class2 = $(this).is(':checked');
-          console.log($(this).is(':checked'));
-      });
-  
-      $(function(){
-          var test = localStorage.checkbox_class3 === 'true'? true: false;
-          $('.checkbox_class3').prop('checked', test || false);
-      });
-      $('.checkbox_class3').on('change', function() {
-          localStorage.checkbox_class3 = $(this).is(':checked');
-          console.log($(this).is(':checked'));
-      });
-  
-      $(function(){
-          var test = localStorage.checkbox_class4 === 'true'? true: false;
-          $('.checkbox_class4').prop('checked', test || false);
-      });
-      $('.checkbox_class4').on('change', function() {
-          localStorage.checkbox_class4 = $(this).is(':checked');
-          console.log($(this).is(':checked'));
-      });
-        </script>`
+    `
   })
 
 }
