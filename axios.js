@@ -82,7 +82,8 @@ const getdata = () => {
     disabled />
       </div>
     </div>
-  </form> 
+  </form>
+  <h3>The Checked green box shows the location of your goods from pick up location to ${res.data.return.shippingAddress} </h3> 
   </div>
     `
   })
