@@ -76,7 +76,7 @@
 
 
   
-      <div style="margin-top: 200px; display: flex; justify-content: center; align-items: center; text-align: center;">
+      <!-- <div style="margin-top: 200px; display: flex; justify-content: center; align-items: center; text-align: center;">
         <h2>Click on the circle to specify the <br> current location of the cargo on transit</h2>
       </div>
 
@@ -144,7 +144,30 @@
             localStorage.checkbox_class4 = $(this).is(':checked');
             console.log($(this).is(':checked'));
         });
-          </script>
+          </script> -->
+
+          <div class="site-section">
+            <div class="container">
+              <div class="table-responsive" style="margin-top: 90px;" >
+                  <table class="table" id="user-list">
+                    <caption>List of users</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Tracking ID</th>
+                        <th scope="col">Shipping Location</th>
+                        <th scope="col">Edit Progress</th>
+                      </tr>
+                    </thead>
+                        <tbody id="tableData"></tbody>
+                    </table>
+                    </div>
+      
+             
+          </div>
+      
+        </div>
 
  
  
