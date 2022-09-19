@@ -80,25 +80,23 @@
         <h2>Click on the circle to specify the <br> current location of the cargo on transit</h2>
       </div>
 
-      <div  id="loadProgress">
+      <div  id="loadProgress" style="margin-bottom: 40px; margin-top: -60px;">
         <div class="contain" >
-          <form id="form" action="" method="POST">
-       
-            <div class="progress" style="background-color: white; height: 65px; margin-top: 30px;" >
-              <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class1" required name="terms"  value="example1" autocomplete="off"  >
+            <form id="form" action="send" method="post">
+              <div class="progress" style="background-color: white; height: 65px; margin-top: 30px;" >
+              <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class1" required name="terms"  value="example1" autocomplete="off"  onclick="send()" >
                 <label for="field_terms">------1------</label></p>
             
-                <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class2" required name="terms"  value="example1" autocomplete="off"  >
+              <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class2" required name="terms"  value="example1" autocomplete="off" onclick="send()" >
                   <label for="field_terms">------2------</label></p>
             
-                  <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class3" required name="terms"  value="example1" autocomplete="off"  >
+              <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class3" required name="terms"  value="example1" autocomplete="off" onclick="send()" >
                     <label for="field_terms">------3------</label></p>
         
-                    <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class4" required name="terms"  value="example1" autocomplete="off"  >
+              <p><input id="field_terms"  type="checkbox" class="checkbox-round checkbox_class4" required name="terms"  value="example1" autocomplete="off" onclick="send()" >
                       <label for="field_terms"></label></p>
-                  </div>
-       
-          </form>
+              </div>
+            </form >
          </div>
            <div class="para">
            <p style="padding: 8px 8px 8px 8px">1. Order picked up</p>
@@ -109,6 +107,15 @@
        </div>
 
        <script type='text/javascript'>
+          function send() {
+            let data = new FormData(form);
+            let formDataEntries = Object.fromEntries(data.entries());
+            console.log("FORM DATA VALUES",formDataEntries);
+          axios.post( 'http://localhost:5000/api/admin/send',formDataEntries)
+          .then((res) => {
+            console.log(res);
+          })
+          }
         $(function(){
             var test = localStorage.checkbox_class1 === 'true'? true: false;
             $('.checkbox_class1').prop('checked', test || false);
@@ -147,7 +154,8 @@
           </script>
 
  
- 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="axioss.js"></script>
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/jquery-migrate-3.0.1.min.js"></script>
   <script src="../js/jquery-ui.js"></script>
