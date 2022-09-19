@@ -1398,7 +1398,7 @@ h1, h2, h3, h4, h5,
   background: #e6e6e6;
   color: #000; }
 
-  input[type="checkbox"]:required:invalid + label { color: red; }
+  /* input[type="checkbox"]:required:invalid + label { color: red; }
         input[type="checkbox"]:required:valid + label { color: green; }
       
         input[type="checkbox"] {
@@ -1422,13 +1422,9 @@ h1, h2, h3, h4, h5,
       .contain{
         display: flex;
         justify-content: center;
-        /* margin-bottom: 20px; */
+        
       }
-      .para{
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-      }
+    
       
       .space{
         padding: 5px
@@ -1438,6 +1434,14 @@ h1, h2, h3, h4, h5,
           background-color: green;
       }
       
+      */
+
+      .para{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
       .progress{
-        height: 30px;
+        height: 20px;
       }

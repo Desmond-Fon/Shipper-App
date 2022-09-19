@@ -83,8 +83,22 @@ const getdata = () => {
       </div>
     </div>
   </form>
-  <h3>The Checked green box shows the location of your goods from pick up location to ${res.data.return.shippingAddress} </h3> 
+  <h3 style='text-align: center; margin-bottom: 30px;'>The progress bar shows the location of your goods from pick up location to ${res.data.return.shippingAddress} </h3> 
   </div>
+
+  <div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+  </div>
+
+ 
+   <div class="para">
+   <h5 style="padding: 8px 8px 8px 8px">25%: Order picked up.</h5>
+   <h5 style="padding: 8px 8px 8px 8px">50%: On transit to ${res.data.return.shippingAddress}.</h5>
+   <h5 style="padding: 8px 8px 8px 8px">75%: Close to arrival.</h5>
+   <h5 style="padding: 8px 0px 8px 8px">100%: Order arrived at ${res.data.return.shippingAddress}</>
+  </div>
+ </div>
     `
   })
 
@@ -93,6 +107,14 @@ const getdata = () => {
 getTrackingId.addEventListener('click', getdata)
 
 
+// new Vue({
+//   el: '#main-app',
+//   data: {
+//     trackingId: ""
+//   },
+//   methods: {},
+
+// })
 
 // const login = document.getElementById('login')
 

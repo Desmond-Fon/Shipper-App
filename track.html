@@ -32,11 +32,13 @@
   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
   crossorigin="anonymous"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+
   </head>
   <body style="overflow-x: hidden;">
   
-  <div class="site-wrap">
-
+  <div id="main-app" class="site-wrap">
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
@@ -129,7 +131,8 @@
             <p style="margin: 0px 120px 0px 120px;">Enter your tracking ID code below and click the "Track" button to find out exactly where your cargo is right now and when it will arrive at it's final destination.</p>
             <form action="#" method="post" style="margin: 0px 150px 0px 150px;">
               <div class="input-group mb-3">
-                <input type="text" class="form-control border-secondary text-black bg-transparent" placeholder="Tracking ID Code" id="trackingid" name="trackingId" aria-label="Enter Email" aria-describedby="button-addon2">
+                <!-- {{trackingId}} -->
+                <input v-model="trackingId" type="text" class="form-control border-secondary text-black bg-transparent" placeholder="Tracking ID Code" id="trackingid" name="trackingId" aria-label="Enter Email" aria-describedby="button-addon2">
                 <div class="input-group-append">
                   <button class="btn btn-primary text-white" type="button" id="button-addon2">Track</button>
                 </div>
@@ -141,12 +144,19 @@
         <div id="trackingDetails">
         </div>
 
+      
+
       </div>
     </div>
+    <!-- setInterval(refreshQuote, 10000); //every 10 seconds
+
+function refreshQuote() {
+  $("#quoteContainer").load("quote.html");
+} -->
 
    <!-- <div style="margin-bottom: 40px; margin-top: -40px;" id="displayedElement"> -->
-    <div  id="loadProgress" style="margin-bottom: 40px; margin-top: -60px;">
-      <div class="contain" >
+    <!-- <div  id="loadProgress" style="margin-bottom: 40px; margin-top: -60px;"  > -->
+      <!-- <div class="contain" >
         <form id="form" action="" method="POST">
      
           <div class="progress" style="background-color: white; height: 65px; margin-top: 30px;" >
@@ -163,53 +173,66 @@
                     <label for="field_terms"></label></p>
                 </div>
      
-        </form>
-       </div>
-         <div class="para">
-         <p style="padding: 8px 8px 8px 8px">1. Order picked up</p>
-         <p style="padding: 8px 8px 8px 8px">2. On transit</p>
-         <p style="padding: 8px 8px 8px 8px">3. Close to arrival</p>
-         <p style="padding: 8px 0px 8px 8px">4. Order arrived</p>
-        </div>
-     </div>
+        </form> -->
+
+      
+     <!-- </div> -->
 
      <script type='text/javascript'>
-      $(function(){
-          var test = localStorage.checkbox_class1 === 'true'? true: false;
-          $('.checkbox_class1').prop('checked', test || false);
-      });
-      $('.checkbox_class1').on('change', function() {
-          localStorage.checkbox_class1 = $(this).is(':checked');
-          console.log($(this).is(':checked'));
-      });
+      // $(function(){
+      //     var test = localStorage.checkbox_class1 === 'true'? true: false;
+      //     $('.checkbox_class1').prop('checked', test || false);
+      // });
+      // $('.checkbox_class1').on('change', function() {
+      //     localStorage.checkbox_class1 = $(this).is(':checked');
+      //     console.log($(this).is(':checked'));
+      // });
 
-      $(function(){
-          var test = localStorage.checkbox_class2 === 'true'? true: false;
-          $('.checkbox_class2').prop('checked', test || false);
-      });
-      $('.checkbox_class2').on('change', function() {
-          localStorage.checkbox_class2 = $(this).is(':checked');
-          console.log($(this).is(':checked'));
-      });
+      // $(function(){
+      //     var test = localStorage.checkbox_class2 === 'true'? true: false;
+      //     $('.checkbox_class2').prop('checked', test || false);
+      // });
+      // $('.checkbox_class2').on('change', function() {
+      //     localStorage.checkbox_class2 = $(this).is(':checked');
+      //     console.log($(this).is(':checked'));
+      // });
 
-      $(function(){
-          var test = localStorage.checkbox_class3 === 'true'? true: false;
-          $('.checkbox_class3').prop('checked', test || false);
-      });
-      $('.checkbox_class3').on('change', function() {
-          localStorage.checkbox_class3 = $(this).is(':checked');
-          console.log($(this).is(':checked'));
-      });
+      // $(function(){
+      //     var test = localStorage.checkbox_class3 === 'true'? true: false;
+      //     $('.checkbox_class3').prop('checked', test || false);
+      // });
+      // $('.checkbox_class3').on('change', function() {
+      //     localStorage.checkbox_class3 = $(this).is(':checked');
+      //     console.log($(this).is(':checked'));
+      // });
 
-      $(function(){
-          var test = localStorage.checkbox_class4 === 'true'? true: false;
-          $('.checkbox_class4').prop('checked', test || false);
-      });
-      $('.checkbox_class4').on('change', function() {
-          localStorage.checkbox_class4 = $(this).is(':checked');
-          console.log($(this).is(':checked'));
-      });
-        </script>
+      // $(function(){
+      //     var test = localStorage.checkbox_class4 === 'true'? true: false;
+      //     $('.checkbox_class4').prop('checked', test || false);
+      // });
+      // $('.checkbox_class4').on('change', function() {
+      //     localStorage.checkbox_class4 = $(this).is(':checked');
+      //     console.log($(this).is(':checked'));
+      // });
+
+//       function refreshQuote() {
+//   $("#loadProgress").load("track.html")
+// }
+
+
+// function render (){
+// $('.contain').load("track.html")
+// }
+// window.setInterval(render, 5000);
+
+// var auto_refresh = setInterval(
+// function ()
+// {
+//    $('.contain').load('track.html');
+// }, 5000); // refresh every 10000 milliseconds
+
+
+        // </script>
 
     
     

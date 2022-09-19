@@ -268,28 +268,68 @@ function RemoveRow() {
 var mainObj = [
   {
       email:  "test@email.com",
+      trackingId: 1234567890, 
       location: "Bahamas",
-      label: '<input type="button" value="Delete" class="btn btn-primary text-white" onclick="RemoveRow()"/>' 
+      progress: `
+      <label for="drop-down">Progress:</label>
+      <select name="drop-down" id="drop-down">
+        <option value="one">Order picked up</option>
+        <option value="two">Order on transit</option>
+        <option value="three">Close to arrival</option>
+        <option value="three">Order arrived</option>
+      </select>`
   },
   {
       email:  "test@email.com",
+      trackingId: 1234567891, 
       location: "Atlanta",
-      label: '<input type="button" value="Delete" class="btn btn-primary text-white" onclick="RemoveRow()"/>' 
+      progress: `
+      <label for="drop-down">Progress:</label>
+      <select name="drop-down" id="drop-down">
+        <option value="one">Order picked up</option>
+        <option value="two">Order on transit</option>
+        <option value="three">Close to arrival</option>
+        <option value="three">Order arrived</option>
+      </select>`
   },
   {
       email:  "test@email.com",
+      trackingId: 1234567892, 
       location: "India",
-      label: '<input type="button" value="Delete" class="btn btn-primary text-white" onclick="RemoveRow()"/>' 
+      progress: `
+      <label for="drop-down">Progress:</label>
+      <select name="drop-down" id="drop-down">
+        <option value="one">Order picked up</option>
+        <option value="two">Order on transit</option>
+        <option value="three">Close to arrival</option>
+        <option value="three">Order arrived</option>
+      </select>`
   },
   {
     email:  "test@email.com",
+    trackingId: 1234567893, 
     location: "Ghana",
-    label: '<input type="button" value="Delete" class="btn btn-primary text-white" onclick="RemoveRow()"/>' 
+    progress: `
+    <label for="drop-down">Progress:</label>
+    <select name="drop-down" id="drop-down">
+      <option value="one">Order picked up</option>
+      <option value="two">Order on transit</option>
+      <option value="three">Close to arrival</option>
+      <option value="three">Order arrived</option>
+    </select>`
 },
 {
   email:  "test@email.com",
+  trackingId: 1234567895, 
   location: "Las Vegas",
-  label: '<input type="button" value="Delete" class="btn btn-primary text-white" onclick="RemoveRow()"/>' 
+  progress: `
+  <label for="drop-down">Progress:</label>
+  <select name="drop-down" id="drop-down">
+    <option value="one">Order picked up</option>
+    <option value="two">Order on transit</option>
+    <option value="three">Close to arrival</option>
+    <option value="three">Order arrived</option>
+  </select>`
 }
 ];
 
@@ -307,9 +347,9 @@ for(i = 0;i < mainObj.length; i++){
   k+= '<tr>';
   k+= '<td>' + mainObj[i].SERIAL_NO + '</td>';
   k+= '<td>' + mainObj[i].email + '</td>';
+  k+= '<td>' + mainObj[i].trackingId + '</td>';
   k+= '<td>' + mainObj[i].location + '</td>';
-// k+= '<td>' + mainObj[i].edit + '</td>';
-k+= '<td>' + mainObj[i].label + '</td>';
+  k+= '<td>' + mainObj[i].progress + '</td>';
   k+= '</tr>';
 }
 k+='</tbody>';
