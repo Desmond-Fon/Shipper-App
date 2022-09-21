@@ -277,7 +277,8 @@ var mainObj = [
         <option value="two">Order on transit</option>
         <option value="three">Close to arrival</option>
         <option value="three">Order arrived</option>
-      </select>`
+      </select>`,
+      delete: `<button class="btn btn-primary text-white">Delete</button>`
   },
   {
       email:  "test@email.com",
@@ -290,7 +291,8 @@ var mainObj = [
         <option value="two">Order on transit</option>
         <option value="three">Close to arrival</option>
         <option value="three">Order arrived</option>
-      </select>`
+      </select>`,
+      delete: `<button class="btn btn-primary text-white">Delete</button>`
   },
   {
       email:  "test@email.com",
@@ -303,7 +305,8 @@ var mainObj = [
         <option value="two">Order on transit</option>
         <option value="three">Close to arrival</option>
         <option value="three">Order arrived</option>
-      </select>`
+      </select>`,
+      delete: `<button class="btn btn-primary text-white">Delete</button>`
   },
   {
     email:  "test@email.com",
@@ -316,7 +319,8 @@ var mainObj = [
       <option value="two">Order on transit</option>
       <option value="three">Close to arrival</option>
       <option value="three">Order arrived</option>
-    </select>`
+    </select>`,
+    delete: `<button class="btn btn-primary text-white">Delete</button>`
 },
 {
   email:  "test@email.com",
@@ -329,7 +333,8 @@ var mainObj = [
     <option value="two">Order on transit</option>
     <option value="three">Close to arrival</option>
     <option value="three">Order arrived</option>
-  </select>`
+  </select>`,
+  delete: `<button class="btn btn-primary text-white">Delete</button>`
 }
 ];
 
@@ -350,6 +355,7 @@ for(i = 0;i < mainObj.length; i++){
   k+= '<td>' + mainObj[i].trackingId + '</td>';
   k+= '<td>' + mainObj[i].location + '</td>';
   k+= '<td>' + mainObj[i].progress + '</td>';
+  k+= '<td>' + mainObj[i].delete + '</td>';
   k+= '</tr>';
 }
 k+='</tbody>';
