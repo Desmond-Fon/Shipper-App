@@ -255,110 +255,111 @@ jQuery(document).ready(function ($) {
 })
 
 // adding users in an array
-var btnButton = document.createElement("button");
+//var btnButton = document.createElement("button");
 // btnButton.innerHTML = "delete";
 
-function RemoveRow() {
-  // event.target will be the input element.
-  var td = event.target.parentNode; 
-  var tr = td.parentNode; // the row to be removed
-  tr.parentNode.removeChild(tr);
-}
+// function RemoveRow() {
+//   // event.target will be the input element.
+//   var td = event.target.parentNode; 
+//   var tr = td.parentNode; // the row to be removed
+//   tr.parentNode.removeChild(tr);
+// }
 
-var mainObj = [
-  {
-      email:  "test@email.com",
-      trackingId: 1234567890, 
-      location: "Bahamas",
-      progress: `
-      <label for="drop-down">Progress:</label>
-      <select name="drop-down" id="drop-down">
-        <option value="one">Order picked up</option>
-        <option value="two">Order on transit</option>
-        <option value="three">Close to arrival</option>
-        <option value="three">Order arrived</option>
-      </select>`,
-      delete: `<button class="btn btn-primary text-white">Delete</button>`
-  },
-  {
-      email:  "test@email.com",
-      trackingId: 1234567891, 
-      location: "Atlanta",
-      progress: `
-      <label for="drop-down">Progress:</label>
-      <select name="drop-down" id="drop-down">
-        <option value="one">Order picked up</option>
-        <option value="two">Order on transit</option>
-        <option value="three">Close to arrival</option>
-        <option value="three">Order arrived</option>
-      </select>`,
-      delete: `<button class="btn btn-primary text-white">Delete</button>`
-  },
-  {
-      email:  "test@email.com",
-      trackingId: 1234567892, 
-      location: "India",
-      progress: `
-      <label for="drop-down">Progress:</label>
-      <select name="drop-down" id="drop-down">
-        <option value="one">Order picked up</option>
-        <option value="two">Order on transit</option>
-        <option value="three">Close to arrival</option>
-        <option value="three">Order arrived</option>
-      </select>`,
-      delete: `<button class="btn btn-primary text-white">Delete</button>`
-  },
-  {
-    email:  "test@email.com",
-    trackingId: 1234567893, 
-    location: "Ghana",
-    progress: `
-    <label for="drop-down">Progress:</label>
-    <select name="drop-down" id="drop-down">
-      <option value="one">Order picked up</option>
-      <option value="two">Order on transit</option>
-      <option value="three">Close to arrival</option>
-      <option value="three">Order arrived</option>
-    </select>`,
-    delete: `<button class="btn btn-primary text-white">Delete</button>`
-},
-{
-  email:  "test@email.com",
-  trackingId: 1234567895, 
-  location: "Las Vegas",
-  progress: `
-  <label for="drop-down">Progress:</label>
-  <select name="drop-down" id="drop-down">
-    <option value="one">Order picked up</option>
-    <option value="two">Order on transit</option>
-    <option value="three">Close to arrival</option>
-    <option value="three">Order arrived</option>
-  </select>`,
-  delete: `<button class="btn btn-primary text-white">Delete</button>`
-}
-];
+// var mainObj = [
+//   {
+//       email:  "test@email.com",
+//       trackingId: 1234567890, 
+//       location: "Bahamas",
+//       progress: `
+//       <label for="drop-down">Progress:</label>
+//       <select name="drop-down" id="drop-down">
+//         <option value="one">Order picked up</option>
+//         <option value="two">Order on transit</option>
+//         <option value="three">Close to arrival</option>
+//         <option value="three">Order arrived</option>
+//       </select>`,
+//       delete: `<button class="btn btn-primary text-white">Delete</button>`
+//   },
+//   {
+//       email:  "test@email.com",
+//       trackingId: 1234567891, 
+//       location: "Atlanta",
+//       progress: `
+//       <label for="drop-down">Progress:</label>
+//       <select name="drop-down" id="drop-down">
+//         <option value="one">Order picked up</option>
+//         <option value="two">Order on transit</option>
+//         <option value="three">Close to arrival</option>
+//         <option value="three">Order arrived</option>
+//       </select>`,
+//       delete: `<button class="btn btn-primary text-white">Delete</button>`
+//   },
+//   {
+//       email:  "test@email.com",
+//       trackingId: 1234567892, 
+//       location: "India",
+//       progress: `
+//       <label for="drop-down">Progress:</label>
+//       <select name="drop-down" id="drop-down">
+//         <option value="one">Order picked up</option>
+//         <option value="two">Order on transit</option>
+//         <option value="three">Close to arrival</option>
+//         <option value="three">Order arrived</option>
+//       </select>`,
+//       delete: `<button class="btn btn-primary text-white">Delete</button>`
+//   },
+//   {
+//     email:  "test@email.com",
+//     trackingId: 1234567893, 
+//     location: "Ghana",
+//     progress: `
+//     <label for="drop-down">Progress:</label>
+//     <select name="drop-down" id="drop-down">
+//       <option value="one">Order picked up</option>
+//       <option value="two">Order on transit</option>
+//       <option value="three">Close to arrival</option>
+//       <option value="three">Order arrived</option>
+//     </select>`,
+//     delete: `<button class="btn btn-primary text-white">Delete</button>`
+// },
+// {
+//   email:  "test@email.com",
+//   trackingId: 1234567895, 
+//   location: "Las Vegas",
+//   progress: `
+//   <label for="drop-down">Progress:</label>
+//   <select name="drop-down" id="drop-down">
+//     <option value="one">Order picked up</option>
+//     <option value="two">Order on transit</option>
+//     <option value="three">Close to arrival</option>
+//     <option value="three">Order arrived</option>
+//   </select>`,
+//   delete: `<button class="btn btn-primary text-white">Delete</button>`
+// }
+// ];
 
-var mainObj_appended = mainObj.map(function(currentValue, Index) {
-currentValue.SERIAL_NO = Index + 1
+// var mainObj_appended = mainObj.map(function(currentValue, Index) {
+//   currentValue.SERIAL_NO = Index + 1
+  
+//   return currentValue
+//   })
 
-return currentValue
-})
+  //const data = document.getElementById('tableData')
+  // console.log("data is", data);
+ 
 
+//let k = '<tbody>'
+// for(i = 0;i < mainObj.length; i++){
+//   k+= '<tr>';
+//   k+= '<td>' + mainObj[i].SERIAL_NO + '</td>';
+//   k+= '<td>' + mainObj[i].email + '</td>';
+//   k+= '<td>' + mainObj[i].trackingId + '</td>';
+//   k+= '<td>' + mainObj[i].location + '</td>';
+//   k+= '<td>' + mainObj[i].progress + '</td>';
+//   k+= '<td>' + mainObj[i].delete + '</td>';
+//   k+= '</tr>';
+// }
+// k+='</tbody>';
+// document.getElementById('tableData').innerHTML = k;
+//  }
 // mainObj.push({label: '<input type="button" value="B"/>' });
-
-
-var k = '<tbody>'
-for(i = 0;i < mainObj.length; i++){
-  k+= '<tr>';
-  k+= '<td>' + mainObj[i].SERIAL_NO + '</td>';
-  k+= '<td>' + mainObj[i].email + '</td>';
-  k+= '<td>' + mainObj[i].trackingId + '</td>';
-  k+= '<td>' + mainObj[i].location + '</td>';
-  k+= '<td>' + mainObj[i].progress + '</td>';
-  k+= '<td>' + mainObj[i].delete + '</td>';
-  k+= '</tr>';
-}
-k+='</tbody>';
-document.getElementById('tableData').innerHTML = k;
-
-
