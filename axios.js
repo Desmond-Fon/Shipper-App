@@ -114,9 +114,10 @@ const getdata = () => {
   <h3 style='text-align: center; margin-bottom: 30px;'>The progress bar shows the location of your goods from pick up location to ${responseOne.data.return.shippingAddress} </h3> 
   </div>
 
-  <div>
-  <div id="progress">
-  <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: ${responseTwo.data.data.progress}%;" aria-valuenow=${responseTwo.data.data.progress} aria-valuemin="0" aria-valuemax="100">${responseTwo.data.data.progress}%</div>
+  
+  <div id="progress" style="border: 1px solid black" >
+    <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: ${responseTwo.data.data.progress}%;" aria-valuenow=${responseTwo.data.data.progress} aria-valuemin="0" aria-valuemax="100">${responseTwo.data.data.progress}%
+    </div>
   </div>
 
  
